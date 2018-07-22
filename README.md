@@ -20,12 +20,14 @@ are made.
 Imagine the scenario; you're in a group where someone has discovered `pylint`
 and decided all commits to production need to have score X/10 in order to pass review.
 
-While linting as part of refactoring is quite helpful, it can be frustrating when
-`pylint` is used with default settings and a numeric pass/fail criteria is established.
+While linting is an extremely import part of refactoring, it can be frustrating when
+`pylint` is used with default settings and a numeric pass/fail criteria is established
+that isn't tailored to the needs of particular code base or development team.
 
 Enter the _Super Lint-Hammer_ -- a commit hook that will run `autopep8` on every
 `*.py` file in the Git repo. While this won't fix fundamental problems with a code base,
 it will make things more compliant with PEP8 standards and usually import `pylint` scores
-significantly.
+significantly. It can allow code to pass automatic review in a pinch,
+and give you enough time to talk to your pedantic co-workers.
 
 [Check it out here.](./build_docs/lint_hammer.md)

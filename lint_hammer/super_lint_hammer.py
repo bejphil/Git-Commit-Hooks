@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import unicode_literals
@@ -19,11 +21,9 @@ class LintHammer:
         path = os.path.dirname(os.path.realpath(__file__))
 
         self.__root_dir = self.__git_root_directory(path)
-        print("Git repo root directory:", self.__root_dir)
 
     def __call__(self):
         py_files = self.__files_with_extension(self.__root_dir, '*.py')
-        print("Found the following python files: ", py_files)
 
         for py_file in py_files:
             self.__fix_files(py_file, self.__args)
@@ -56,20 +56,20 @@ class LintHammer:
         with io.open(file_path, encoding='UTF-8') as f:
             original_contents = f.read()
 
-        new_contents = autopep8.fix_code(original_contents, args)
+        corrected_text = autopep8.fix_code(original_contents, args)
 
-        if original_contents != new_contents:
-            print('Fixing {}'.format(file_path))
+        if original_contents != corrected_text:
+
+            print( "Applying autopep8 to: ", file_path )
             with io.open(file_path, 'w', encoding='UTF-8') as output_file:
-                output_file.write(new_contents)
-
+                output_file.write(corrected_text)
 
 def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
     args = argv
     # args = autopep8.parse_args(argv, apply_config=True)
 
-    hammer = LintHammer(args)
+    hammer = LintHammer( args )
     hammer()
 
 
