@@ -30,4 +30,4 @@ it will make things more compliant with PEP8 standards and usually import `pylin
 significantly. It can allow code to pass automatic review in a pinch,
 and give you enough time to talk to your pedantic co-workers.
 
-[Check it out here.](./build_docs/lint_hammer.md)
+[Check it out here.](./lint_hammer/lint_hammer.md)
