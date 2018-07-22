@@ -13,7 +13,7 @@ base is updated.
 This hook takes the latter option -- documentation is re-built whenever commits
 are made.
 
-[Check it Out here](./build_docs/build_and_update_sphinx_docs.md)
+[Check it out here.](./build_docs/build_and_update_sphinx_docs.md)
 
 ## Super Lint-Hammer
 
@@ -28,4 +28,4 @@ Enter the _Super Lint-Hammer_ -- a commit hook that will run `autopep8` on every
 it will make things more compliant with PEP8 standards and usually import `pylint` scores
 significantly.
 
-[Check it Out here](./build_docs/lint_hammer.md)
+[Check it out here.](./build_docs/lint_hammer.md)
