@@ -26,7 +26,7 @@ that isn't tailored to the needs of particular code base or development team.
 
 Enter the _Super Lint-Hammer_ -- a commit hook that will run `autopep8` on every
 `*.py` file in the Git repo. While this won't fix fundamental problems with a code base,
-it will make things more compliant with PEP8 standards and usually import `pylint` scores
+it will make things more compliant with PEP8 standards and usually improve `pylint` scores
 significantly. It can allow code to pass automatic review in a pinch,
 and give you enough time to talk to your pedantic co-workers.
 
